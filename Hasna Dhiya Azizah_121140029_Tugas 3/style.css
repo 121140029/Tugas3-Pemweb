@@ -1,0 +1,150 @@
+/* Style dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #3a72ec;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Navigasi */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Khusus halaman Home */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    min-height: 70vh; /* Agar berada di tengah secara vertikal */
+    justify-content: center; /* Memposisikan konten di tengah vertikal */
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center; /* Menengahkan gambar */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    background-color: #d8f2f7;
+    width: 50%; /* Ukuran lebar untuk responsif */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.profile-info h2 {
+    text-align: center;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+/* Konten Utama (Halaman Lain) */
+.container {
+    display: flex;
+    justify-content: center; /* Menengahkan secara horizontal */
+    align-items: center; /* Menengahkan secara vertikal */
+    margin: 20px;
+    height: 70vh; /* Sesuaikan tinggi untuk menengahkan kotak secara vertikal */
+}
+
+.block-item {
+    background-color: #d8f2f7;
+    width: 50%; /* Sesuaikan lebar agar lebih proporsional */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4b8cf3;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+/* Media Queries untuk tampilan responsif */
+@media (min-width: 1024px) {
+    /* Untuk PC */
+    .block-item, .profile-info {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Untuk Tablet */
+    .block-item, .profile-info {
+        width: 45%;
+    }
+
+    .container, .home-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Untuk HP */
+    .block-item, .profile-info {
+        width: 100%;
+    }
+
+    .container, .home-container {
+        flex-direction: column;
+    }
+}
